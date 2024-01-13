@@ -47,7 +47,7 @@ if(fs.existsSync('./doc/deleteme.txt')){
 }
 
 if(fs.existsSync('./doc/blog3.txt')){
-    fs.unlink('.doc/blog.txt',(err)=>{
+    fs.unlink('./doc/blog3.txt',(err)=>{
         if(err){
             console.log(err)
         }
