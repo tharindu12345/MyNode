@@ -8,6 +8,7 @@ const server = http.createServer((req, res) => {
 
   res.setHeader("Content-Type", "text/html");
 
+  // routing
   let path = "./views/";
   switch (req.url) {
     case "/":
@@ -18,10 +19,14 @@ const server = http.createServer((req, res) => {
       path += "about.html";
       res.statusCode = 200;
       break;
+    case "/about-us":
+      res.statusCode = 301;
+      res.setHeader("Location", "/about");
+      res.end();
+      break;
     default:
       path += "404.html";
       res.statusCode = 404;
-      break;
   }
 
   //send html file
