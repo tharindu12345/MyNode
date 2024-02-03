@@ -5,9 +5,10 @@ const app = express();
 
 app.listen(3000);
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  //   res.send("<p>Home Page</p>");
-  res.sendFile("/views/index.html", { root: __dirname });
+  res.render("index");
 });
 app.get("/about", (req, res) => {
   //   res.send("<p>About Page</p>");
