@@ -11,8 +11,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 app.get("/about", (req, res) => {
-  //   res.send("<p>About Page</p>");
-  res.sendFile("/views/about.html", { root: __dirname });
+  res.render("about");
 });
 
 app.get("/about-us", (req, res) => {
